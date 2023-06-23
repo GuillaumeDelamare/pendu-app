@@ -1,0 +1,35 @@
+:host {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    gap: 5px;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(5, 1fr);
+}
+
+:host > button {
+    border-radius: 5px;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: monospace;
+    font-size: 3vh;
+    border: none;
+}
+
+:host > button:not([disabled]):hover {
+    cursor: pointer;
+    filter: brightness(1.4);
+}
+
+:host > .new-game {
+    background-color: yellowgreen;
+    grid-column: 2 / 6;
+}
+
+:host > button:disabled {
+    filter: brightness(0.6)
+    opacity(0.8)
+}
